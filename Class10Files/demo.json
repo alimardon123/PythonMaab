@@ -1,0 +1,14 @@
+[
+  {
+    "name": "John",
+    "Age": 25,
+    "bool": true,
+    "pets": ["cat", "dog"]
+  },
+  {
+    "name": "Shawn",
+    "Age": null,
+    "bool": false,
+    "pets": ["cat", "dog"]
+  }
+]
