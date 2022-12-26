@@ -1,12 +1,12 @@
 
 
 lb = [            
-                    "-#---P",
-                    "------",
-                    "---#--",
-                    "----#-",
-                    "-#-#--",
-                    "------"]
+                "P#----",
+                "------",
+                "---#--",
+                "---X#-",
+                "-###--",
+                "------"]
 
 
 
@@ -155,19 +155,23 @@ def solve_labirint(labirint):
 
             if (labirint[x][y+1]!='#') and y < columns and y+1 <= dest_y and (y+1 != old_y):  
                 while (labirint[x][y+1]!='#') and y < columns and y+1 <= dest_y:
-                        old_x = x
-                        old_y = y
-                        x, y = o_ng(x, y)
-
-                        if x ==dest_x and y ==dest_y:
-                            return res
+                    old_x = x
+                    old_y = y
+                    x, y = o_ng(x, y)
+                    # for i in labirint:
+                    #     print(i)
+                    # print("---\n---\n")    
+                    if x ==dest_x and y ==dest_y:
+                        return res
 
             elif (labirint[x][y-1] != "#") and y-1 != 0 and   y-1 != old_y and (y-1 > dest_y or  labirint[x+1][y-1] !="#" or (x == dest_x and (labirint[x][y+1] =="#" or (labirint[x+1][y] == "#" and labirint[x-1][y] == "#" and y+1 == old_y)))):
                 while (labirint[x][y-1] != "#") and y-1 != 0 and y-1 != old_y and  (y-1 > dest_y or labirint[x+1][y-1] !="#" or (x == dest_x and (labirint[x][y+1] =="#" or (labirint[x+1][y] == "#" and labirint[x-1][y] == "#" and y+1 == old_y)))):
                     old_x = x
                     old_y = y
                     x, y = chap(x, y)
-
+                    # for i in labirint:
+                    #     print(i)
+                    # print("---\n---\n") 
                     if x ==dest_x and y ==dest_y:
                         return res
 
@@ -176,10 +180,12 @@ def solve_labirint(labirint):
                     old_x = x
                     old_y = y
                     x, y = pastga(x, y)
-
+                    # for i in labirint:
+                    #     print(i)
+                    # print("---\n---\n") 
                     if x ==dest_x and y ==dest_y:
                         return res
-                    if labirint[x][y+1] != "#" and x+1 ==old_x:
+                    if labirint[x][y+1] != "#":
                         break
                     elif x+1 ==old_x:
                         break
@@ -189,7 +195,9 @@ def solve_labirint(labirint):
                     old_x = x
                     old_y = y
                     x, y = tepaga(x, y)
-                    
+                    # for i in labirint:
+                    #     print(i)
+                    # print("---\n---\n") 
                     if x ==dest_x and y ==dest_y:
                         return res
                     if labirint[x][y+1] != "#":
@@ -200,7 +208,9 @@ def solve_labirint(labirint):
                     old_x = x
                     old_y = y
                     x, y = pastga(x, y)
-
+                    # for i in labirint:
+                    #     print(i)
+                    # print("---\n---\n") 
                     if x ==dest_x and y ==dest_y:
                         return res
                     if labirint[x][y+1] != "#":
