@@ -1,0 +1,4 @@
+firstName,lastName,gender,age,streetAddress,city,state,phoneNumbers_type,phoneNumbers_number
+Joe,Jackson,male,28,101,San Diego,CA,home,7349282382
+Jane,Doe,female,25,10,New York,US,home,1234569872
+Jane,Doe,female,25,10,New York,US,personal,1234123412

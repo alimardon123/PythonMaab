@@ -1,0 +1,29 @@
+[{
+   "firstName": "Joe",
+   "lastName": "Jackson",
+   "gender": "male",
+   "age": 28,
+   "address": {
+       "streetAddress": "101",
+       "city": "San Diego",
+       "state": "CA"
+   },
+   "phoneNumbers": [
+       { "type": "home", "number": "7349282382" }
+   ]
+},
+{
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "gender": "female",
+    "age": 25,
+    "address": {
+        "streetAddress": "10",
+        "city": "New York",
+        "state": "US"
+    },
+    "phoneNumbers": [
+        { "type": "home", "number": "1234569872" },
+        { "type": "personal", "number": "1234123412" }
+    ]
+ }]
