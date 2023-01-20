@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QR Code Generator</title>
+    <style>
+      /* Add some styles to make the page look nice */
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      form {
+        display: inline-block;
+        margin-bottom: 50px;
+      }
+      input[type="text"] {
+        width: 300px;
+        height: 30px;
+        font-size: 18px;
+        padding: 5px;
+        border: 1px solid #ccc;
+      }
+      button {
+        height: 40px;
+        font-size: 18px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Add a form where the user can input the data they want to encode in the QR code -->
+    <form id="qr-form">
+      <input
+        type="text"
+        id="qr-data"
+        placeholder="Enter the data to encode in the QR code"
+      />
+      <button type="submit">Generate QR Code</button>
+    </form>
+
+    <!-- Add an image element where the generated QR code will be displayed -->
+    <img id="qr-code" src="" alt="QR Code" />
+
+    <!-- Include the qrcode library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+
+    <script>
+      // Get a reference to the form and the image element
+      const form = document.getElementById("qr-form");
+      const qrCode = document.getElementById("qr-code");
+
+      // Add an event listener to the form's submit event
+      form.addEventListener("submit", (event) => {
+        // Prevent the form from submitting and reloading the page
+        event.preventDefault();
+
+        // Get the data the user entered in the form
+        const data = document.getElementById("qr-data").value;
+
+        // Use the qrcode library to generate a QR code image
+        const qr = new QRCode(qrCode, {
+          text: data,
+          width: 300,
+          height: 300,
+          colorDark: "#000000",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.H,
+        });
+      });
+    </script>
+  </body>
+</html>

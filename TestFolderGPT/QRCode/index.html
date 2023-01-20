@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QR Code Generator</title>
+    <style>
+      /* Add some styles to make the page look nice */
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      form {
+        display: inline-block;
+        margin-bottom: 50px;
+      }
+      input[type="text"] {
+        width: 300px;
+        height: 30px;
+        font-size: 18px;
+        padding: 5px;
+        border: 1px solid #ccc;
+      }
+      button {
+        height: 40px;
+        font-size: 18px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Add a form where the user can input the data they want to encode in the QR code -->
+    <form action="/" method="GET">
+      <input
+        type="text"
+        name="data"
+        placeholder="Enter the data to encode in the QR code"
+      />
+      <button type="submit">Generate QR Code</button>
+    </form>
+
+    <!-- Display the generated QR code image -->
+    <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code" />
+  </body>
+</html>

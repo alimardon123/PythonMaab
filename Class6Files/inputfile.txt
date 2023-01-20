@@ -1,3 +1,4 @@
+Ismi,Year_Of_Exprience
 Hikmatyor,6
 Zokirjon,7
 Ozod,11

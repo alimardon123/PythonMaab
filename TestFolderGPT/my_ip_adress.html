@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My IP Address</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 50px;
+        background-color: #eee;
+      }
+
+      h1 {
+        font-size: 32px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        color: #00b8d4;
+        margin-bottom: 20px;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@fnando/ip@2.0.0/dist/ip.min.js">
+      var ipCache = localStorage.getItem("ip");
+      if (ipCache) {
+        // Display the IP address from the cache
+        document.getElementById("ip").innerHTML = ipCache;
+      } else {
+        // Fetch the IP address and store it in the cache
+        fetch(src)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            var ip = data.ip;
+            // Display the IP address on the page
+            localStorage.setItem("ip", ip);
+            document.getElementById("ip").innerHTML = ip;
+          })
+          .catch(function (error) {
+            console.error(error);
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Your IP Address</h1>
+    <p id="ip"></p>
+  </body>
+</html>

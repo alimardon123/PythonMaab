@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <h1>Report of ETL Jobs</h1>
+  <table id="myTable">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>SalaryLastMonth</th>
+      <th>SalaryCurrentMonth</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Been</td>
+      <td>1500</td>
+      <td>1200</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Roma</td>
+      <td>600</td>
+      <td>1200</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Steven</td>
+      <td>3000</td>
+      <td>1200</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Paulo</td>
+      <td>800</td>
+      <td>1200</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Genryh</td>
+      <td>1000</td>
+      <td>1200</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Bruno</td>
+      <td>2500</td>
+      <td>1200</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Fred</td>
+      <td>1500</td>
+      <td>1200</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Andro</td>
+      <td>2000</td>
+      <td>1200</td>
+    </tr>
+  </table>
+  <style>
+    h1 {
+      color: #1a309e;
+      size: 7px;
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse; /* Removes the default cell spacing */
+      width: 80%; /* Makes the table fill the width of its container */
+      margin: 0 auto;
+    }
+
+    th,
+    td {
+      text-align: left; /* Aligns the text in the cells */
+      padding: 8px; /* Adds some padding to the cells */
+      border: 0.5px solid rgb(2, 15, 57); /* Adds a border to the cells */
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2; /* Changes the background color of even rows */
+    }
+
+    th {
+      background-color: #1a309e; /* Changes the background color of the table headers */
+      color: white;
+      border: 0.5px #000000;
+      border-top: #1a309e;
+      border-bottom: #1a309e;
+      /* Changes the text color of the table headers */
+    }
+  </style>
+
+  <script>
+    var table = document.getElementById("myTable");
+    for (var i = 1; i < table.rows.length; i++) {
+      var row = table.rows[i];
+      var col1 = row.cells[2].innerHTML;
+      var col2 = row.cells[3].innerHTML;
+      if (col1 < col2) {
+        row.style.backgroundColor = "orange";
+      }
+    }
+  </script>
+</html>
