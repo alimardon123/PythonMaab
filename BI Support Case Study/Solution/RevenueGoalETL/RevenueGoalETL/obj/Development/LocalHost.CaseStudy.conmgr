@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="LocalHost.CaseStudy"
+  DTS:DTSID="{461E7DFA-6335-4A75-9028-9EC2AA46F5F1}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=.;Initial Catalog=CaseStudy;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-RevenueGoalETL-{461E7DFA-6335-4A75-9028-9EC2AA46F5F1}LocalHost.CaseStudy;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
